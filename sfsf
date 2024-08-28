@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MUN - Global Edge School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #dddfeb; /* Soft background color */
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3f4f6; /* Lighter soft background */
             color: #002642;
             margin: 0;
             padding: 0;
             scroll-behavior: smooth; /* Smooth scrolling */
         }
+
         header {
             background-color: #002642;
             padding: 20px;
             text-align: center;
-            color: #d6d9e7;
-            transition: background-color 0.5s ease; /* Transition for header background color */
+            color: #ffffff;
+            transition: background-color 0.5s ease;
+            font-family: 'Source Serif 4', serif; /* Serif font for the header */
+            position: relative;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
         nav {
             background-color: #07a0c3;
             padding: 15px;
@@ -28,44 +47,54 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: background-color 0.5s ease; /* Transition for nav background color */
+            transition: background-color 0.5s ease;
         }
+
         nav a {
-            color: #d6d9e7;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease; /* Transition for link color */
+            font-weight: 600; /* Bolder font weight */
+            padding: 5px 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
+
         nav a:hover {
-            color: #002642; /* Color change on hover */
+            color: #f3f4f6; /* Slightly lighter color on hover */
+            transform: translateY(15px); /* Button extends downward by 15 pixels on hover */
         }
+
         .container {
             padding: 20px;
             margin: 20px auto;
             max-width: 1200px;
-            background-color: #fafafa;
+            background-color: #ffffff;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeInUp 1s forwards; /* Animation for container appearance */
+            animation: fadeInUp 1s forwards;
         }
+
         h1, h2 {
             color: #002642;
             opacity: 0;
-            animation: fadeIn 1s forwards; /* Animation for headers */
+            animation: fadeIn 1s forwards;
+            font-family: 'Source Serif 4', serif; /* Serif font for headers */
         }
+
         .home-section {
             text-align: center;
             padding: 50px 0;
         }
+
         .home-section p {
             font-size: 18px;
             margin: 20px 0;
             opacity: 0;
             animation: fadeIn 1s forwards;
-            animation-delay: 0.5s; /* Delayed animation for text */
+            animation-delay: 0.5s;
         }
+
         .home-section img {
             width: 100%;
             max-width: 800px;
@@ -74,8 +103,9 @@
             margin-top: 20px;
             opacity: 0;
             animation: fadeIn 1s forwards;
-            animation-delay: 1s; /* Delayed animation for images */
+            animation-delay: 1s;
         }
+
         .location-link {
             color: #07a0c3;
             text-decoration: none;
@@ -84,32 +114,46 @@
             display: inline-block;
             opacity: 0;
             animation: fadeIn 1s forwards;
-            animation-delay: 1.5s; /* Delayed animation for location link */
+            animation-delay: 1.5s;
         }
-        .countdown {
-            font-size: 24px;
-            margin-top: 30px;
-            color: #07a0c3;
+
+        .register-button {
+            background-color: #07a0c3;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
             opacity: 0;
             animation: fadeIn 1s forwards;
-            animation-delay: 2s; /* Delayed animation for countdown */
+            animation-delay: 2s;
+            transition: background-color 0.3s ease;
         }
+
+        .register-button:hover {
+            background-color: #005f77;
+        }
+
         footer {
             background-color: #6270a6;
             text-align: center;
             padding: 10px;
-            color: #fafafa;
+            color: #ffffff;
             position: fixed;
             width: 100%;
             bottom: 0;
-            transition: background-color 0.5s ease; /* Transition for footer background color */
+            transition: background-color 0.5s ease;
         }
+
         /* Keyframes for fadeIn and fadeInUp animations */
         @keyframes fadeIn {
             to {
                 opacity: 1;
             }
         }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -119,9 +163,9 @@
     </style>
 </head>
 <body>
-
     <header>
         <h1>Global Edge School MUN 2024</h1>
+        <h2>TGES MADHAPUR MUN 2024-25</h2>
     </header>
 
     <nav>
@@ -135,8 +179,9 @@
     <div id="home" class="container home-section">
         <h2>Welcome to the Global Edge School MUN 2024</h2>
         <p>Join us for a transformative experience as we delve into global issues and diplomatic discussions.</p>
-        <div id="countdown" class="countdown"></div> <!-- Countdown Timer -->
-        <a href="https://www.google.com/maps?q=Global+Edge+School" target="_blank" class="location-link">Find Us on Google Maps</a>
+        <!-- Add images here once you provide them -->
+        <a href="https://www.google.com/maps?q=Global+Edge+School+Madhapur" target="_blank" class="location-link">Find Us on Google Maps</a>
+        <a href="https://forms.gle/your-google-form-link" target="_blank" class="register-button">Register Now</a>
     </div>
 
     <div id="resources" class="container">
@@ -169,37 +214,6 @@
     <footer>
         <p>&copy; 2024 Global Edge School MUN | All Rights Reserved</p>
     </footer>
-
-    <!-- Countdown Timer Script -->
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Oct 1, 2024 00:00:00").getTime();
-
-        // Update the countdown every 1 second
-        var countdownFunction = setInterval(function() {
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the countdown date
-            var distance = countDownDate - now;
-
-            // Time calculations for days, hours, minutes, and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the countdown element
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
-
-            // If the countdown is finished, write some text
-            if (distance < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "The event has started!";
-            }
-        }, 1000);
-    </script>
-
 </body>
 </html>
+
